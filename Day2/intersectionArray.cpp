@@ -7,13 +7,15 @@ int main()
     int n=sizeof(arr1)/sizeof(int);
     int m=sizeof(arr2)/sizeof(int);
     set<int> s;
+    set<int> p;
+   
     for(int i=0;i<n;i++){
         s.insert(arr1[i]);
     }
     for(int i=0;i<m;i++){
         if(s.find(arr2[i])!=s.end())
         {
-            s.insert(arr2[i]);
+            p.insert(arr2[i]);
         }
     }
     for(auto x:s)
