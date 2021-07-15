@@ -1,0 +1,37 @@
+class Solution {
+public:
+     string convert(string month)
+    {
+        if(month == "Jan") return "01";
+        else if(month == "Feb") return "02";
+        else if(month == "Mar") return "03";
+        else if(month == "Apr") return "04";
+        else if(month == "May") return "05";
+        else if(month == "Jun") return "06";
+        else if(month == "Jul") return "07";
+        else if(month == "Aug") return "08";
+        else if(month == "Sep") return "09";
+        else if(month == "Oct") return "10";
+        else if(month == "Nov") return "11";
+        else return "12";
+    }
+    string reformatDate(string s) {
+      
+      
+        string month;
+        string ans;
+        if(s.size()==13)
+        {
+            month=s.substr(5,3);
+            ans=s.substr(9,4)+'-'+convert(month)+'-'+s.substr(0,2);
+        }
+        else
+        {
+             month=s.substr(4,3);
+            ans=s.substr(8,4)+'-'+convert(month)+"-0"+s.substr(0,1);
+        }
+        return ans;
+    }
+    
+};
+
