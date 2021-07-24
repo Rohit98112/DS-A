@@ -1,6 +1,6 @@
 #include<bits/stdc++.h>
 using namespace std;
-
+// good
 int main()
 {
     string num1="123678532";
